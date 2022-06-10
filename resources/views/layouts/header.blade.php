@@ -24,7 +24,7 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-5 col-6">
 							<div class="logo">
-								<a href="index.html"><img src="img/logo/logo2.png" alt="eduhome" /></a>
+								<a href="index.html"><img src="{{ asset('templates/img/logo/logo2.png') }}" alt="ISAGE/K-B" /></a>
 							</div>
 						</div>
 						<div class="col-md-9 col-sm-7 col-6">

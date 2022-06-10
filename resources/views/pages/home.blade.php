@@ -4,7 +4,7 @@
             <section id="slider-container" class="slider-area two">
                 <div class="slider-owl owl-theme owl-carousel">
                     <!-- Start Slingle Slide -->
-                    <div class="single-slide item" style="background-image: url(img/slider/slider2.jpg)">
+                    <div class="single-slide item" style="background-image: url({{asset('templates/img/slider/slider2.jpg')}})">
                         <!-- Start Slider Content -->
                         <div class="slider-content-area">
                             <div class="container">
@@ -25,7 +25,7 @@
                     </div>
                     <!-- End Slingle Slide -->
                     <!-- Start Slingle Slide -->
-                    <div class="single-slide item" style="background-image: url(img/slider/slider3.jpg)">
+                    <div class="single-slide item" style="background-image: url(templates/img/slider/slider3.jpg)">
                         <!-- Start Slider Content -->
                         <div class="slider-content-area">
                             <div class="container">
@@ -46,7 +46,7 @@
                     </div>
                     <!-- End Slingle Slide -->
                     <!-- Start Slingle Slide -->
-                    <div class="single-slide item" style="background-image: url(img/slider/slider1.jpg)">
+                    <div class="single-slide item" style="background-image: url(templates/img/slider/slider1.jpg)">
                         <!-- Start Slider Content -->
                         <div class="slider-content-area">
                             <div class="container">
