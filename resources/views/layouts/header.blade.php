@@ -24,7 +24,7 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-5 col-6">
 							<div class="logo">
-								<a href="index.html"><img src="{{ asset('templates/img/logo/logo2.png') }}" alt="ISAGE/K-B" /></a>
+								<a href="index.html"><img src="{{ asset('templates/img/logo/logo4.png') }}" alt="ISAGE/K-B" /></a>
 							</div>
 						</div>
 						<div class="col-md-9 col-sm-7 col-6">
@@ -33,46 +33,16 @@
                                 <div class="main-menu">
                                     <nav>
                                         <ul>
-                                            <li><a href="index.html">Home</a>
-                                                <ul>
-                                                    <li><a href="index.html">Home One</a></li>
-                                                    <li><a href="index-2.html">Home Two</a></li>
-                                                    <li><a href="index-3.html">Home Three</a></li>
-                                                    <li><a href="index-4.html">Home Four</a></li>
-                                                    <li><a href="index-5.html">Home Five</a></li>
-                                                </ul>
+                                            <li><a href="index.html">Accueil</a>
                                             </li>
                                             <li><a href="about.html">About</a></li>
-                                            <li><a href="course.html">courses</a>
-                                                <ul>
-                                                    <li><a href="course.html">courses</a></li>
-                                                    <li><a href="course-details.html">courses details</a></li>
-                                                </ul>
+                                            <li><a href="course.html">Cours</a>
                                             </li>
-                                            <li><a href="event.html">event</a>
-                                                <ul>
-                                                    <li><a href="event.html">event</a></li>
-                                                    <li><a href="event-left-side-bar.html">event left sidebar</a></li>
-                                                    <li><a href="event-right-side-bar.html">event right sidebar</a></li>
-                                                    <li><a href="event-details.html">event details</a></li>
-                                                </ul>
+                                            <li><a href="event.html">Evenements</a>
                                             </li>
-                                            <li class="hidden-sm"><a href="teacher.html">teacher</a>
-                                                <ul>
-                                                    <li><a href="teacher.html">teacher</a></li>
-                                                    <li><a href="teacher-details.html">teacher details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="blog.html">blog</a>
-                                                <ul>
-                                                    <li><a href="blog.html">blog</a></li>
-                                                    <li><a href="blog-left-side-bar.html">blog left sidebar</a></li>
-                                                    <li><a href="blog-right-side-bar.html">blog righ sidebar</a></li>
-                                                    <li><a href="blog-details.html">blog details</a></li>
-                                                </ul>
+                                            <li class="hidden-sm"><a href="teacher.html">Enseignants</a>
                                             </li>
                                             <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="contact.html">Buy Now</a>
                                         </ul>
                                     </nav>
                                 </div>

@@ -895,11 +895,11 @@ textarea {
   width: 43px;
 }
 #search-form > button:hover{
-    background: #EC1C23;
+    background: #023b0c;
     border: 2px solid #939369;
 }
 .search-menu {
-    background: #2b5e2b none repeat scroll 0 0;
+    background: #023b0c none repeat scroll 0 0;
     border-radius: 50%;
     color: #fff;
     display: inline-block;
@@ -914,7 +914,7 @@ textarea {
     font-size: 12px;
     line-height: 30px;
 }
-.search-menu:hover{background:#EC1C23}
+.search-menu:hover{background:#023b0c}
 .open.search {
     display: block;
     opacity: 1;
@@ -982,7 +982,7 @@ textarea {
     line-height: 132px;
 }
 .header-area.two .main-menu > ul > li:hover > a {
-    color: #EC1C23;
+    color: #023b0c;
 }
 /*----------------------------------------*/
 /*  3. Slider CSS
@@ -1123,7 +1123,7 @@ textarea {
 .slider-area .owl-item.active .slide-content p {-webkit-animation-delay: 1100ms;animation-delay: 1100ms}
 .slider-area .owl-item.active .slide-content .banner-btn {-webkit-animation-delay: 1700ms;animation-delay: 1700ms}
 .owl-nav div {
-    background: rgba(236, 28, 35, 0.64);
+    background: rgba(6, 87, 13, 0.64);
     color: #ddd;
     font-size: 18px;
     border-radius: 3px;
@@ -1582,8 +1582,8 @@ textarea {
 }
 .event-content-right a:hover{
     color: #fff;
-    background: #EC1C23;
-    border: 1px solid #EC1C23;
+    background: #023b0c;
+    border: 1px solid #023b0c;
 }
 .single-event:hover .event-date{background: #EC1C23}
 .event-area.two .event-img{
@@ -1620,7 +1620,7 @@ textarea {
     transition: all 0.5s ease 0s;
 }
 .event-area.two .event-content h4 a:hover{
-    color: #EC1C23;
+    color: #023b0c;
 }
 .event-area.two .event-content ul{
     margin-bottom: 15px;
@@ -1713,7 +1713,7 @@ textarea {
     float: left;
 }
 .event-area.three .event-content-right a {
-    background: #ec1c23 none repeat scroll 0 0;
+    background: #023b0c none repeat scroll 0 0;
     color: #fff;
     margin-right: 0;
     padding: 8px 20px;
@@ -2154,7 +2154,7 @@ textarea {
     display: inline-block;
 }
 .reply-area form .reply-btn:hover{
-    background: #EC1C23;
+    background: #023b0c;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
@@ -2356,8 +2356,8 @@ textarea {
     color: #c7c7c7;
 }
 .footer-social ul li:hover a, .footer-area.two .footer-social ul li:hover a{
-    border: 1px solid #EC1C23;
-    background: #EC1C23;
+    border: 1px solid #023b0c;
+    background: #023b0c;
     color: #fff;
 }
 .single-widget ul li:last-child{

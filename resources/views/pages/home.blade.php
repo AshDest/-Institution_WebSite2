@@ -12,8 +12,8 @@
                                     <div class="col-md-10 offset-md-1">
                                         <div class="slide-content-wrapper">
                                             <div class="slide-content text-center">
-                                                <h2>EDUCATION MAKES HUMANITY </h2>
-                                                <p>I must explain to you how all this mistaken idea of denouncing pleasure and prsing pain was born and I will give you a complete account of the system  </p>
+                                                <h2>PROFITEZ DE LA QUALITÉ D’ENSEIGNEMENT </h2>
+                                                <p>Plus qu'une matière scolaire la science est mère de grandes vérités. Ambassadrice de l'exactitude, elle suscite beaucoup de pensées. </p>
                                                 <a class="default-btn" href="about.html">Learn more</a>
                                             </div>
                                         </div>
