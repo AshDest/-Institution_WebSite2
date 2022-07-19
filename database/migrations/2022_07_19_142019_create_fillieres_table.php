@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('fillieres', function (Blueprint $table) {
             $table->id();
+            $table->string('designation');
+            $table->text('detail');
             $table->timestamps();
         });
     }
