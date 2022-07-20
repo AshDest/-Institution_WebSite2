@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Personnel extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'matricule',
+        'nom',
+        'postNom',
+        'prenom',
+        'fonction',
+        'grade'
+    ];
 }
