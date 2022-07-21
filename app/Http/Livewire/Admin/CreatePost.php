@@ -5,9 +5,8 @@ namespace App\Http\Livewire\Admin;
 use App\Models\Post;
 use Livewire\Component;
 
-class Posts extends Component
+class CreatePost extends Component
 {
-
     public $titre;
     public $content;
     public $image;
@@ -18,7 +17,7 @@ class Posts extends Component
     protected $rules = [
         'titre' => 'required',
         'content' => 'required',
-        'image' => 'image|max:1024',
+        'image' => 'required',
     ];
 
     protected $messages = [
@@ -29,16 +28,18 @@ class Posts extends Component
 
     public function save()
     {
+        dd('destin');
         $this->validate();
         // Validate Form Request
         try {
             $this->image->storeAs('Posts', $this->titre);
             Post::create([
-                'titre' => ucfirst(trans($this->titre)),
-                'content' => ucfirst(trans($this->content)),
-                'image' => ucfirst(trans($this->image)),
+                'titre' => ucfirst(trans($this->designation)),
+                'content' => ucfirst(trans($this->description)),
+                'image' => ucfirst(trans($this->type_classe)),
 
             ])->save();
+            // Set Flash Message
             $this->dispatchBrowserEvent('alert', [
                 'type' => 'success',
                 'message' => "Classe enregistée avec succes!!"
@@ -55,9 +56,9 @@ class Posts extends Component
             // Reset Form Fields After Creating departement
         }
     }
+
     public function render()
     {
-        $posts = Post::all();
-        return view('livewire.admin.posts', ['posts'=>$posts]);
+        return view('livewire.admin.create-post');
     }
 }

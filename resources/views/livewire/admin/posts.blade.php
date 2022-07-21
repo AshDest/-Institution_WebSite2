@@ -19,9 +19,10 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                     <div class="col-lg-6">
-                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ajouter</button>
-                     </div>
+                    <div class="col-lg-6">
+                        <button class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">Ajouter</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -45,14 +46,17 @@
                                 @forelse ($posts as $post)
                                 <tr>
                                     {{-- <td class="table-user">
-                                        <img src="assets/images/users/avatar-2.jpg" alt="table-user" class="me-2 rounded-circle" />
+                                        <img src="assets/images/users/avatar-2.jpg" alt="table-user"
+                                            class="me-2 rounded-circle" />
                                         Risa D. Pearson
                                     </td> --}}
                                     <td>{{$post->titre}}</td>
                                     <td>{{$post->content}}</td>
                                     <td class="table-action">
-                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
-                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
                                 @empty
@@ -62,50 +66,62 @@
                                 @endforelse
                                 {{-- <tr>
                                     <td class="table-user">
-                                        <img src="assets/images/users/avatar-2.jpg" alt="table-user" class="me-2 rounded-circle" />
+                                        <img src="assets/images/users/avatar-2.jpg" alt="table-user"
+                                            class="me-2 rounded-circle" />
                                         Risa D. Pearson
                                     </td>
                                     <td>AC336 508 2157</td>
                                     <td>July 24, 1950</td>
                                     <td class="table-action">
-                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
-                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="table-user">
-                                        <img src="assets/images/users/avatar-3.jpg" alt="table-user" class="me-2 rounded-circle" />
+                                        <img src="assets/images/users/avatar-3.jpg" alt="table-user"
+                                            class="me-2 rounded-circle" />
                                         Ann C. Thompson
                                     </td>
                                     <td>SB646 473 2057</td>
                                     <td>January 25, 1959</td>
                                     <td class="table-action">
-                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
-                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="table-user">
-                                        <img src="assets/images/users/avatar-4.jpg" alt="table-user" class="me-2 rounded-circle" />
+                                        <img src="assets/images/users/avatar-4.jpg" alt="table-user"
+                                            class="me-2 rounded-circle" />
                                         Paul J. Friend
                                     </td>
                                     <td>DL281 308 0793</td>
                                     <td>September 1, 1939</td>
                                     <td class="table-action">
-                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
-                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="table-user">
-                                        <img src="assets/images/users/avatar-5.jpg" alt="table-user" class="me-2 rounded-circle" />
+                                        <img src="assets/images/users/avatar-5.jpg" alt="table-user"
+                                            class="me-2 rounded-circle" />
                                         Sean C. Nguyen
                                     </td>
                                     <td>CA269 714 6825</td>
                                     <td>February 5, 1994</td>
                                     <td class="table-action">
-                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
-                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr> --}}
                             </tbody>
@@ -116,3 +132,16 @@
         </div>
     </div>
 </div>
+
+{{-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Create Post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            @livewire('admin.create-post')
+        </div>
+    </div>
+</div> --}}

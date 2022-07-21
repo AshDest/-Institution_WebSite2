@@ -17,6 +17,7 @@
     <!-- App css -->
     <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" id="app-style" />
+    @livewireStyles
 
 </head>
 
@@ -150,7 +151,49 @@
 
     <div class="rightbar-overlay"></div>
     <!-- /End-bar -->
+    <script type="text/javascript">
+        // window.addEventListener('ok', function(event){
+        //     // toastr.success(event.detail.message);
+        // });
+        window.addEventListener('fail', function(event){
+            //window.location.reload(true);
+            toastr.success(event.detail.message);
+        });
 
+        window.addEventListener('info', function(event){
+            //window.location.reload(true);
+            toastr.success(event.detail.message);
+        });
+
+    </script>
+    @livewireScripts
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'bottom-end',
+			iconColor: 'white',
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 5000,
+            timerProgressBar:true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+		window.addEventListener('ok',({detail:{type,message}})=>{
+            Toast.fire({
+                icon:type,
+                title:message
+            })
+        })
+        window.addEventListener('alert',({detail:{type,message}})=>{
+            Toast.fire({
+                icon:type,
+                title:message
+            })
+        })
+    </script>
     <!-- bundle -->
     <script src="{{ asset('assets/js/vendor.min.js') }}"></script>
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
