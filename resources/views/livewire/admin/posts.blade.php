@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <div class="col-lg-6">
                         <button class="btn btn-success" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">Ajouter</button>
+                            data-bs-target="#add_post">Ajouter</button>
                     </div>
                 </div>
             </div>

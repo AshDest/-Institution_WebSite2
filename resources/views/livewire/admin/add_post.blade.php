@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div wire:ignore.self class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+<div wire:ignore.self class="modal fade" id="add_post" data-bs-backdrop="static" data-bs-keyboard="false"
     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -20,7 +20,7 @@
                             rows="3"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Default file input example</label>
+                        <label for="formFile" class="form-label">Image</label>
                         <input class="form-control" wire:model='image' type="file" id="formFile">
                         @error('image') <span class="error">{{ $message }}</span> @enderror
                     </div>

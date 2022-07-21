@@ -39,6 +39,7 @@ class Posts extends Component
         try {
             $this->image->storeAs('Post', $this->titre);
             Post::create($validatedData);
+            $this->emit('StudentUpdated');
             $this->dispatchBrowserEvent('alert', [
                 'type' => 'success',
                 'message' => "Classe enregistée avec succes!!"
