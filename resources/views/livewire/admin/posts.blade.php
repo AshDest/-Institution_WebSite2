@@ -1,3 +1,4 @@
+@include('livewire.admin.add_post')
 <div class="container-fluid">
     <!-- start page title -->
     <div class="row">
@@ -5,12 +6,23 @@
             <div class="page-title-box">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                        <li class="breadcrumb-item active">Basic Tables</li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Posts</a></li>
+                        <li class="breadcrumb-item active">All Posts</li>
                     </ol>
                 </div>
-                <h4 class="page-title">Basic Tables</h4>
+                <h4 class="page-title">All Posts</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                     <div class="col-lg-6">
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ajouter</button>
+                     </div>
+                </div>
             </div>
         </div>
     </div>
@@ -23,14 +35,32 @@
                         <table class="table table-striped table-centered mb-0">
                             <thead>
                                 <tr>
-                                    <th>User</th>
-                                    <th>Account No.</th>
-                                    <th>Balance</th>
+                                    <th>#</th>
+                                    <th>Titre</th>
+                                    <th>Detail</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @forelse ($posts as $post)
                                 <tr>
+                                    {{-- <td class="table-user">
+                                        <img src="assets/images/users/avatar-2.jpg" alt="table-user" class="me-2 rounded-circle" />
+                                        Risa D. Pearson
+                                    </td> --}}
+                                    <td>{{$post->titre}}</td>
+                                    <td>{{$post->content}}</td>
+                                    <td class="table-action">
+                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                @empty
+                                <div class="alert alert-danger">
+                                    <center> . . . Liste vide . . .</center>
+                                </div>
+                                @endforelse
+                                {{-- <tr>
                                     <td class="table-user">
                                         <img src="assets/images/users/avatar-2.jpg" alt="table-user" class="me-2 rounded-circle" />
                                         Risa D. Pearson
@@ -77,7 +107,7 @@
                                         <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
                                         <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
                                     </td>
-                                </tr>
+                                </tr> --}}
                             </tbody>
                         </table>
                     </div>

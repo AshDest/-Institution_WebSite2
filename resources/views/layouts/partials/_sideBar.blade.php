@@ -21,19 +21,15 @@
     </a>
 
     <div class="h-100" id="leftside-menu-container" data-simplebar>
-
         <!--- Sidemenu -->
         <ul class="side-nav">
-
             <li class="side-nav-title side-nav-item">Navigation</li>
-
             <li class="side-nav-item">
                 <a href="apps-calendar.html" class="side-nav-link">
                     <i class="uil-home-alt"></i>
                     <span> Home </span>
                 </a>
             </li>
-
             <li class="side-nav-title side-nav-item">WEB SITE COMPONENTS</li>
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false"
