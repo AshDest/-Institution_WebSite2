@@ -4,12 +4,17 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\Post;
 use Livewire\Component;
+use Livewire\WithFileUploads;
+use Intervention\Image\ImageManager;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class CreatePost extends Component
 {
+    use WithFileUploads;
+    use LivewireAlert;
     public $titre;
     public $content;
-    public $image;
+    public $photo;
 
     public $ids;
 
@@ -17,13 +22,16 @@ class CreatePost extends Component
     protected $rules = [
         'titre' => 'required',
         'content' => 'required',
-        'image' => 'required',
+        'photo' => 'image|max:70000|required|mimes:jpeg,png,jpg,gif',
     ];
 
     protected $messages = [
         'titre.required' => 'Le titre est obligatoire',
         'content.required' => 'Le detail est obligatoire',
-        'image.required' => 'Selectionner un fichier',
+        'photo.required' => 'Vous devez selectionner une image.',
+        'photo.image' => 'Vous devez selectionner une image valide.',
+        'photo.max' => 'La taille du fichier est trop grande.',
+        'photo.mimes' => 'Image incorrect !',
     ];
 
     public function save()
@@ -31,12 +39,14 @@ class CreatePost extends Component
         dd('destin');
         $this->validate();
         // Validate Form Request
+        $imageHash = $this->photo->hashName();
+        $manager =  new ImageManager();
+        $manager->make($this->photo->getRealPath())->resize(50, 50)->save('assets/img/post/' . $imageHash);
         try {
-            $this->image->storeAs('Posts', $this->titre);
             Post::create([
                 'titre' => ucfirst(trans($this->designation)),
                 'content' => ucfirst(trans($this->description)),
-                'image' => ucfirst(trans($this->type_classe)),
+                'image' => $imageHash,
 
             ])->save();
             // Set Flash Message
