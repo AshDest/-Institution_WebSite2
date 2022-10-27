@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/posts', [App\Http\Controllers\AdminController::class, 'posts'])->name('posts');
+Route::get('/posts/add', [App\Http\Controllers\AdminController::class, 'addpost'])->name('addpost');

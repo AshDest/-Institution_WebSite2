@@ -10,6 +10,12 @@
             <textarea class="form-control" wire:model='content' id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <div class="mb-3">
+            <a target="_blank" href="{{asset('src=" assets/images/post/{{$post->image}}"')}}" style="text-align:
+                center">
+                <img src="{{asset('assets/img/patient/'.$this->oldlogo.'')}}" alt="logo" style="width:50px;">
+            </a>
+        </div>
+        <div class="mb-3">
             <label for="formFile" class="form-label">Image</label>
             <input class="form-control" wire:model='photo' type="file" id="formFile">
             @error('photo') <span class="error">{{ $message }}</span> @enderror
