@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/posts', [App\Http\Controllers\AdminController::class, 'posts'])->name('posts');
 Route::get('/posts/add', [App\Http\Controllers\AdminController::class, 'addpost'])->name('addpost');
+Route::get('/posts/edit/{ids}', [App\Http\Controllers\AdminController::class, 'editpost'])->name('editpost');

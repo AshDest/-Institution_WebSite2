@@ -54,8 +54,8 @@
                                     <td>{{$post->titre}}</td>
                                     <td>{{$post->content}}</td>
                                     <td class="table-action">
-                                        <a href="javascript: void(0);" class="action-icon"> <i
-                                                class="mdi mdi-pencil"></i></a>
+                                        <a href="{{ route('editpost', ['ids'=>$post->id]) }}" class="action-icon">
+                                            <i class="mdi mdi-pencil"></i></a>
                                         <a href="javascript: void(0);" class="action-icon"> <i
                                                 class="mdi mdi-delete"></i></a>
                                     </td>

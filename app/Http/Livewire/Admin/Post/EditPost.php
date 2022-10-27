@@ -34,6 +34,33 @@ class EditPost extends Component
         'photo.mimes' => 'Image incorrect !',
     ];
 
+    public function edit()
+    {
+        try {
+            if ($this->photo != null) {
+                $this->validate();
+                $imageHash = $this->photo->hashName();
+                $manager =  new ImageManager();
+                $manager->make($this->photo->getRealPath())->resize(50, 50)->save('assets/images/post/' . $imageHash);
+                Post::find($this->ids)->fill([
+                    'titre' => ucfirst(trans($this->titre)),
+                    'content' => ucfirst(trans($this->content)),
+                    'image' => $imageHash,
+                ])->save();
+                $this->cleanupOldLogo();
+            } else {
+                Post::find($this->ids)->fill([
+                    'titre' => ucfirst(trans($this->titre)),
+                    'content' => ucfirst(trans($this->content)),
+                ])->save();
+            }
+            $this->alert('success', 'Post Modifier avec Success!');
+            return redirect()->route('posts');
+        } catch (\Throwable $e) {
+            $this->alert('warning', 'Erreur Enregistrement' . $e, ['position' => 'center']);
+        }
+    }
+
 
     //unlink or delete file
     public function cleanupOldLogo()
