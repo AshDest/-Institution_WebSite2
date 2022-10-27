@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Admin;
+namespace App\Http\Livewire\Admin\Post;
 
 use App\Models\Post;
 use Livewire\Component;
@@ -8,7 +8,7 @@ use Livewire\WithFileUploads;
 use Intervention\Image\ImageManager;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
-class CreatePost extends Component
+class EditPost extends Component
 {
     use WithFileUploads;
     use LivewireAlert;
@@ -17,7 +17,7 @@ class CreatePost extends Component
     public $photo;
 
     public $ids;
-
+    public $oldlogo;
 
     protected $rules = [
         'titre' => 'required',
@@ -34,30 +34,28 @@ class CreatePost extends Component
         'photo.mimes' => 'Image incorrect !',
     ];
 
-    public function save()
-    {
-        try {
-            $this->validate();
-            // Validate Form Request
-            $imageHash = $this->photo->hashName();
-            $manager =  new ImageManager();
-            $manager->make($this->photo->getRealPath())->resize(50, 50)->save('assets/images/post/' . $imageHash);
-            Post::create([
-                'titre' => ucfirst(trans($this->titre)),
-                'content' => ucfirst(trans($this->content)),
-                'image' => $imageHash,
 
-            ])->save();
-            $this->alert('success', 'Enregistrement Reussi');
-            return redirect()->route('posts');
-        } catch (\Exception $e) {
-            $this->alert('warning', 'Erreur Enregistrement' . $e, ['position' => 'center']);
+    //unlink or delete file
+    public function cleanupOldLogo()
+    {
+        if ($this->oldlogo != null) {
+            $path = public_path('assets/images/post/' . $this->oldlogo);
+            if (file_exists($path)) {
+                unlink($path);
+            }
         }
     }
 
+    public function mount()
+    {
+        $vars = Post::find($this->ids);
+        $this->titre = $vars->titre;
+        $this->content = $vars->content;
+        $this->oldlogo = $vars->image;
+    }
 
     public function render()
     {
-        return view('livewire.admin.create-post');
+        return view('livewire.admin.post.edit-post');
     }
 }
