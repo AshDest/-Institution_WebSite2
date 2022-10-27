@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-        /**
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -29,5 +29,9 @@ class AdminController extends Controller
     public function posts()
     {
         return view('Admin_pages.post');
+    }
+    public function addpost()
+    {
+        return view('Admin_pages.create-post');
     }
 }
