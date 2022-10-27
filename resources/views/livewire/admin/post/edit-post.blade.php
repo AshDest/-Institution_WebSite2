@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <form class="form-horizontal" enctype="multipart/form-data" wire:submit.prevent="save">
+    <form class="form-horizontal" enctype="multipart/form-data" wire:submit.prevent="edit">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Titre</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="titre de la publication"
@@ -10,10 +10,19 @@
             <textarea class="form-control" wire:model='content' id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <div class="mb-3">
-            <a target="_blank" href="{{asset('src=" assets/images/post/{{$post->image}}"')}}" style="text-align:
-                center">
-                <img src="{{asset('assets/img/patient/'.$this->oldlogo.'')}}" alt="logo" style="width:50px;">
-            </a>
+            @if ($this->oldlogo!=null)
+            <div class="form-group row">
+                <div class="col-lg-8">
+                    <a target="_blank" href="{{asset('assets/images/post/'.$this->oldlogo.'')}}"
+                        style="text-align: center">
+                        <img src="{{asset('assets/images/post/'.$this->oldlogo.'')}}" alt="logo" style="width:50px;">
+                    </a>
+                </div>
+            </div>
+            @endif
+            @if ($this->oldlogo==null)
+            <span class="label label-primary mr6 mb6">photo no defini</span>
+            @endif
         </div>
         <div class="mb-3">
             <label for="formFile" class="form-label">Image</label>

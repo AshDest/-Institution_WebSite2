@@ -34,4 +34,9 @@ class AdminController extends Controller
     {
         return view('Admin_pages.create-post');
     }
+
+    public function editpost($ids)
+    {
+        return view('Admin_pages.edit-post', compact('ids'));
+    }
 }
