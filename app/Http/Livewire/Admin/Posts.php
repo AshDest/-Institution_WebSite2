@@ -4,42 +4,43 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\Post;
 use Livewire\Component;
-use Livewire\WithFileUploads;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Posts extends Component
 {
-    use WithFileUploads;
+    use LivewireAlert;
 
+    public $ids;
     protected $listeners = [
         'confirmed'
     ];
 
-    public function alertdelete($id)
-    {
-        $this->display_delete = $id;
-        $this->alert('warning', 'How are you today?', [
-            'showConfirmButton' => true,
-            'confirmButtonText' => 'Suprimer',
-            'showCancelButton' => true,
-            'cancelButtonText' => 'Cancel',
-            'onConfirmed' => 'confirmed',
-            'onDismissed' => 'cancelled',
-            'position' => 'center'
-        ]);
-        //  $this->display_delete = $id;
-        // dd( $this->display_delete );
-
-    }
     public function confirmed()
     {
-        $vars = Post::whereId($this->ids)->delete();
-        if ($vars) {
-            // User::where('patient_id ',$this->display_delete)->delete();
-            $this->alert('success', 'Post bien Suprime!');
-            $this->cleanupOldLogo();
-        }
-        return redirect()->route('posts');
+        Post::whereId($this->ids)->delete();
+        $this->alert('success', 'Suppression avec Success', [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
     }
+
+    public function cancelled()
+    {
+        // Do something when cancel button is clicked
+    }
+
+    public function delete($id)
+    {
+        //
+        $this->ids = $id;
+
+        $this->confirm('Voulez vous supprimer?', [
+            'onConfirmed' => 'confirmed',
+        ]);
+        dd($id);
+    }
+
     public function render()
     {
         $posts = Post::all();

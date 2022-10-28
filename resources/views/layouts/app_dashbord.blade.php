@@ -167,34 +167,10 @@
 
     </script>
     @livewireScripts
+    <!-- livewire alert Message -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'bottom-end',
-			iconColor: 'white',
-            showConfirmButton: false,
-            showCloseButton: true,
-            timer: 5000,
-            timerProgressBar:true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-        });
-		window.addEventListener('ok',({detail:{type,message}})=>{
-            Toast.fire({
-                icon:type,
-                title:message
-            })
-        })
-        window.addEventListener('alert',({detail:{type,message}})=>{
-            Toast.fire({
-                icon:type,
-                title:message
-            })
-        })
-    </script>
+
+    <x-livewire-alert::scripts />
     <!-- bundle -->
     <script src="{{ asset('assets/js/vendor.min.js') }}"></script>
     <script src="{{ asset('assets/js/app.min.js') }}"></script>

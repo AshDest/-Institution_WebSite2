@@ -9,7 +9,10 @@
     @include('layouts.css')
     @livewireStyles
     <script src="{{ asset('js/vendor/modernizr-3.11.2.min.js') }}"></script>
+    <!-- livewire alert Message -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <x-livewire-alert::scripts />
 </head>
 
 <body>
