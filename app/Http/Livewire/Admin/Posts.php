@@ -10,79 +10,36 @@ class Posts extends Component
 {
     use WithFileUploads;
 
-    public $titre;
-    public $content;
-    public $image;
+    protected $listeners = [
+        'confirmed'
+    ];
 
-    public $ids;
-
-
-    // protected $rules = [
-    //     'titre' => 'required',
-    //     'content' => 'required',
-    //     'image' => 'image|max:1024',
-    // ];
-
-    // protected $message = [
-    //     'titre.required' => 'Le titre est obligatoire',
-    //     'content.required' => 'Le detail est obligatoire',
-    //     'image.required' => 'Selectionner un fichier',
-    // ];
-
-    public function update()
+    public function alertdelete($id)
     {
-        $validatedData = $this->validate([
-            'titre' => 'required',
-            'content' => 'required',
-            'image' => 'image|max:1024',
+        $this->display_delete = $id;
+        $this->alert('warning', 'How are you today?', [
+            'showConfirmButton' => true,
+            'confirmButtonText' => 'Suprimer',
+            'showCancelButton' => true,
+            'cancelButtonText' => 'Cancel',
+            'onConfirmed' => 'confirmed',
+            'onDismissed' => 'cancelled',
+            'position' => 'center'
         ]);
-        try {
-            $this->image->storeAs('Post', $this->titre);
-            Post::create($validatedData);
-            $this->emit('StudentUpdated');
-            $this->dispatchBrowserEvent('alert', [
-                'type' => 'success',
-                'message' => "Classe enregistée avec succes!!"
-            ]);
-        } catch (\Exception $e) {
-            // Set Flash Message
-            $this->dispatchBrowserEvent('alert', [
-                'type' => 'error',
-                'message' => "Quelque chose ne va pas lors de l'enregistrement de la classe'!! " . $e->getMessage()
-            ]);
-        }
+        //  $this->display_delete = $id;
+        // dd( $this->display_delete );
+
     }
-
-
-    // public function save()
-    // {
-    //     // $this->image->store('Posts');
-    //     $this->validate();
-    //     // Validate Form Request
-    //     try {
-    //         $this->image->store('Posts');
-    //         Post::create([
-    //             'titre' => ucfirst(trans($this->titre)),
-    //             'content' => $this->content,
-    //             'image' => $this->image,
-
-    //         ])->save();
-    //         $this->dispatchBrowserEvent('alert', [
-    //             'type' => 'success',
-    //             'message' => "Classe enregistée avec succes!!"
-    //         ]);
-    //         // Reset Form Fields After Creating departement
-    //     } catch (\Exception $e) {
-
-    //         dd($e->getMessage());
-    //         // Set Flash Message
-    //         $this->dispatchBrowserEvent('alert', [
-    //             'type' => 'error',
-    //             'message' => "Quelque chose ne va pas lors de l'enregistrement de la classe'!! " . $e->getMessage()
-    //         ]);
-    //         // Reset Form Fields After Creating departement
-    //     }
-    // }
+    public function confirmed()
+    {
+        $vars = Post::whereId($this->ids)->delete();
+        if ($vars) {
+            // User::where('patient_id ',$this->display_delete)->delete();
+            $this->alert('success', 'Post bien Suprime!');
+            $this->cleanupOldLogo();
+        }
+        return redirect()->route('posts');
+    }
     public function render()
     {
         $posts = Post::all();
