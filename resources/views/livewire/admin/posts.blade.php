@@ -56,7 +56,7 @@
                                     <td class="table-action">
                                         <a href="{{ route('editpost', ['ids'=>$post->id]) }}" class="action-icon">
                                             <i class="mdi mdi-pencil"></i></a>
-                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                        <a href="" class="action-icon" wire:click="delete({{ $post->id }})"> <i
                                                 class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
