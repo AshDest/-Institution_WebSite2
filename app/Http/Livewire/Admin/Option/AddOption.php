@@ -32,7 +32,7 @@ class AddOption extends Component
 
             ])->save();
             $this->alert('success', 'Enregistrement Reussi');
-            return redirect()->route('options');
+            return redirect()->route('option');
         } catch (\Exception $e) {
             $this->alert('warning', 'Erreur Enregistrement' . $e, ['position' => 'center']);
         }

@@ -52,13 +52,16 @@
                         <li>
                             <a href="apps-ecommerce-orders-details.html">News</a>
                         </li>
+                        <li>
+                            <a href="{{ route('option') }}">Option</a>
+                        </li>
                     </ul>
                 </div>
             </li>
 
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false"
-                    aria-controls="sidebarEmail" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail"
+                    class="side-nav-link">
                     <i class="uil-envelope"></i>
                     <span> Media </span>
                     <span class="menu-arrow"></span>
@@ -77,8 +80,8 @@
             <li class="side-nav-title side-nav-item">SETTING</li>
 
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false"
-                    aria-controls="sidebarPages" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages"
+                    class="side-nav-link">
                     <i class="uil-copy-alt"></i>
                     <span> Internal </span>
                     <span class="menu-arrow"></span>

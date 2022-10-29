@@ -32,7 +32,7 @@ class EditOption extends Component
                 'detail' => ucfirst(trans($this->detail)),
             ])->save();
             $this->alert('success', 'Option Modifier avec Success!');
-            return redirect()->route('options');
+            return redirect()->route('option');
         } catch (\Throwable $e) {
             $this->alert('warning', 'Erreur Enregistrement' . $e, ['position' => 'center']);
         }
