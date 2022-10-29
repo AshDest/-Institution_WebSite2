@@ -112,7 +112,9 @@
                     </div>
                 </div>
                 @empty
-
+                <div class="alert alert-danger">
+                    <center> . . . Pas d'Images . . .</center>
+                </div>
                 @endforelse
             </div>
         </div>
@@ -144,7 +146,9 @@
                                 <p>{{$new->detail}}</p>
                             </div>
                             @empty
-
+                            <div class="alert alert-danger">
+                                <center> . . . Pas d'Images . . .</center>
+                            </div>
                             @endforelse
 
                         </div>
