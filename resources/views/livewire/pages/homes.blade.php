@@ -87,66 +87,33 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <img src="img/icon/section1.png" alt="section-title">
-                        <h2>COURSES WE OFFER</h2>
+                        <img src="{{ asset('img/icon/section1.png') }}" alt="section-title">
+                        <h2>LES FILLIERES ORGANISEES</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
+                @forelse ($fillieres as $filliere)
                 <div class="col-lg-4 col-md-6">
                     <div class="single-course">
                         <div class="course-img">
-                            <a href="course-details.html"><img src="img/course/course1.jpg" alt="course">
+                            <a href="course-details.html"><img src="assets/images/filliere/{{$filliere->photo}}"
+                                    alt="course">
                                 <div class="course-hover">
                                     <i class="fa fa-link"></i>
                                 </div>
                             </a>
                         </div>
                         <div class="course-content">
-                            <h3><a href="course-details.html">CSE ENGINEERING</a></h3>
-                            <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the
-                                rut
-                                the is lder of human happiness</p>
-                            <a class="default-btn" href="course-details.html">read more</a>
+                            <h4><a href="course-details.html">{{$filliere->designation}}</a></h4>
+                            <p>{{substr($filliere->detail, 0, 60).'...'}}</p>
+                            <a class="default-btn" href="course-details.html">Voir plus</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-course">
-                        <div class="course-img">
-                            <a href="course-details.html"><img src="img/course/course2.jpg" alt="course">
-                                <div class="course-hover">
-                                    <i class="fa fa-link"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="course-content">
-                            <h3><a href="course-details.html">political science</a></h3>
-                            <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the
-                                rut
-                                the is lder of human happiness</p>
-                            <a class="default-btn" href="course-details.html">read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pt-4 pt-lg-0">
-                    <div class="single-course">
-                        <div class="course-img">
-                            <a href="course-details.html"><img src="img/course/course3.jpg" alt="course">
-                                <div class="course-hover">
-                                    <i class="fa fa-link"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="course-content">
-                            <h3><a href="course-details.html">micro biology</a></h3>
-                            <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the
-                                rut
-                                the is lder of human happiness</p>
-                            <a class="default-btn" href="course-details.html">read more</a>
-                        </div>
-                    </div>
-                </div>
+                @empty
+
+                @endforelse
             </div>
         </div>
     </div>
@@ -169,44 +136,17 @@
                 </div>
                 <div class="col-md-6">
                     <div class="notice-left-wrapper">
-                        <h3>notice board</h3>
+                        <h3>Dernières Infos</h3>
                         <div class="notice-left">
+                            @forelse ($news as $new)
                             <div class="single-notice-left mb-23 pb-20">
-                                <h4>5, June 2021</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising
-                                    pain
-                                    was born and I will give you a complete </p>
+                                <h4>{{$new->created_at}}</h4>
+                                <p>{{$new->detail}}</p>
                             </div>
-                            <div class="single-notice-left hidden-sm mb-23 pb-20">
-                                <h4>4, June 2021</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising
-                                    pain
-                                    was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left pb-70">
-                                <h4>3, June 2021</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising
-                                    pain
-                                    was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left mb-23 pb-20">
-                                <h4>5, June 2021</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising
-                                    pain
-                                    was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left hidden-sm mb-23 pb-20">
-                                <h4>4, June 2021</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising
-                                    pain
-                                    was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left pb-70">
-                                <h4>3, June 2021</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising
-                                    pain
-                                    was born and I will give you a complete </p>
-                            </div>
+                            @empty
+
+                            @endforelse
+
                         </div>
                     </div>
                 </div>
