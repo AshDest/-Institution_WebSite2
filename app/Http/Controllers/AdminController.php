@@ -74,4 +74,19 @@ class AdminController extends Controller
     {
         return view('Admin_pages.edit-news', compact('ids'));
     }
+
+    public function fillieres()
+    {
+        return view('Admin_pages.fillieres');
+    }
+
+    public function addfilliere()
+    {
+        return view('Admin_pages.add-filliere');
+    }
+
+    public function editfilliere($ids)
+    {
+        return view('Admin_pages.edit-filliere', compact('ids'));
+    }
 }
