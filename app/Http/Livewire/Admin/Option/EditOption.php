@@ -24,6 +24,19 @@ class EditOption extends Component
         'detail.required' => 'c champ est obligatoire',
     ];
 
+    public function edit()
+    {
+        try {
+            Option::find($this->ids)->fill([
+                'designation' => ucfirst(trans($this->designation)),
+                'detail' => ucfirst(trans($this->detail)),
+            ])->save();
+            $this->alert('success', 'Option Modifier avec Success!');
+            return redirect()->route('options');
+        } catch (\Throwable $e) {
+            $this->alert('warning', 'Erreur Enregistrement' . $e, ['position' => 'center']);
+        }
+    }
     public function mount()
     {
         $vars = Option::find($this->ids);
