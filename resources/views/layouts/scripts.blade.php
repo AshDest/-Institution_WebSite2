@@ -9,3 +9,7 @@
 <script src="{{ asset('templates/js/jquery.nicescroll.min.js') }}"></script>
 <script src="{{ asset('templates/js/plugins.js') }}"></script>
 <script src="{{ asset('templates/js/main.js') }}"></script>
+<!-- plugin js -->
+<script src="{{ asset('assets/js/vendor/dropzone.min.js') }}"></script>
+<!-- init js -->
+<script src="{{ asset('assets/js/ui/component.fileupload.js') }}"></script>

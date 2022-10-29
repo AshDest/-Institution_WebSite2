@@ -54,4 +54,9 @@ class AdminController extends Controller
     {
         return view('Admin_pages.edit-option', compact('ids'));
     }
+
+    public function slides()
+    {
+        return view('Admin_pages.Slide-Image');
+    }
 }
