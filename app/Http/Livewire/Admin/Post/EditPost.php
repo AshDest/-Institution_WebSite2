@@ -33,7 +33,10 @@ class EditPost extends Component
         'photo.max' => 'La taille du fichier est trop grande.',
         'photo.mimes' => 'Image incorrect !',
     ];
-
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
     public function edit()
     {
         try {

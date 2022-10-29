@@ -23,7 +23,10 @@ class EditNews extends Component
         'titre.required' => 'La designation  Option est obligatoire',
         'detail.required' => 'c champ est obligatoire',
     ];
-
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
     public function edit()
     {
         try {

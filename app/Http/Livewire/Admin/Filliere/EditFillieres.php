@@ -35,6 +35,10 @@ class EditFillieres extends Component
         'photo.mimes' => 'Image incorrect !',
     ];
 
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
     public function edit()
     {
         try {
