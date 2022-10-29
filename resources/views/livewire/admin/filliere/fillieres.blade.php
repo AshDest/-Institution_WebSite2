@@ -51,14 +51,14 @@
                                         <img src="assets/images/filliere/{{$filliere->photo}}" alt="table-user"
                                             class="me-2 rounded-circle" />
                                     </td>
-                                    <td>{{$filliere->designation}}</td>
+                                    <td class="text-success">{{$filliere->designation}}</td>
                                     <td>{{$filliere->detail}}</td>
                                     <td class="table-action">
                                         <a href="{{ route('editfilliere', ['ids'=>$filliere->id]) }}"
-                                            class="action-icon">
+                                            class="action-icon text-primary">
                                             <i class="mdi mdi-pencil"></i></a>
-                                        <a href="" class="action-icon" wire:click="delete({{ $filliere->id }})"> <i
-                                                class="mdi mdi-delete"></i></a>
+                                        <a href="" class="action-icon text-danger"
+                                            wire:click="delete({{ $filliere->id }})"> <i class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
                                 @empty
