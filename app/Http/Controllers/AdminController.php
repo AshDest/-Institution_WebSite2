@@ -39,4 +39,19 @@ class AdminController extends Controller
     {
         return view('Admin_pages.edit-post', compact('ids'));
     }
+
+    public function option()
+    {
+        return view('Admin_pages.option');
+    }
+
+    public function addoption()
+    {
+        return view('Admin_pages.add-option');
+    }
+
+    public function editoption($ids)
+    {
+        return view('Admin_pages.edit-option', compact('ids'));
+    }
 }

@@ -23,3 +23,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/posts', [App\Http\Controllers\AdminController::class, 'posts'])->name('posts');
 Route::get('/posts/add', [App\Http\Controllers\AdminController::class, 'addpost'])->name('addpost');
 Route::get('/posts/edit/{ids}', [App\Http\Controllers\AdminController::class, 'editpost'])->name('editpost');
+Route::get('/option', [App\Http\Controllers\AdminController::class, 'option'])->name('option');
+Route::get('/option/add', [App\Http\Controllers\AdminController::class, 'addoption'])->name('addoption');
+Route::get('/option/edit/{ids}', [App\Http\Controllers\AdminController::class, 'editoption'])->name('editoption');
