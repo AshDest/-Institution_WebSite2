@@ -22,6 +22,10 @@ class AddNews extends Component
         'detail.required' => 'c champ est obligatoire',
     ];
 
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
     public function save()
     {
         $this->validate();

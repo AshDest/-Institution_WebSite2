@@ -35,10 +35,14 @@ class AddFillieres extends Component
         'photo.mimes' => 'Image incorrect !',
     ];
 
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
     public function save()
     {
+        $this->validate();
         try {
-            $this->validate();
             // Validate Form Request
             $imageHash = $this->photo->hashName();
             $manager =  new ImageManager();

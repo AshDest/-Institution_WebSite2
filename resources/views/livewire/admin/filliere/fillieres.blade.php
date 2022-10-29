@@ -48,7 +48,7 @@
                                 <tr>
                                     <td>{{$i}}</td>
                                     <td class="table-user">
-                                        <img src="assets/images/post/{{$filliere->photo}}" alt="table-user"
+                                        <img src="assets/images/filliere/{{$filliere->photo}}" alt="table-user"
                                             class="me-2 rounded-circle" />
                                     </td>
                                     <td>{{$filliere->designation}}</td>

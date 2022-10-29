@@ -58,6 +58,9 @@
                         <li>
                             <a href="{{ route('slide') }}">Slides Images</a>
                         </li>
+                        <li>
+                            <a href="{{ route('fillieres') }}">Fillieres</a>
+                        </li>
                     </ul>
                 </div>
             </li>
