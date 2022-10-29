@@ -32,13 +32,10 @@ class Posts extends Component
 
     public function delete($id)
     {
-        //
         $this->ids = $id;
-
         $this->confirm('Voulez vous supprimer?', [
             'onConfirmed' => 'confirmed',
         ]);
-        dd($id);
     }
 
     public function render()
