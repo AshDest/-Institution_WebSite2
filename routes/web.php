@@ -27,3 +27,7 @@ Route::get('/option', [App\Http\Controllers\AdminController::class, 'option'])->
 Route::get('/option/add', [App\Http\Controllers\AdminController::class, 'addoption'])->name('addoption');
 Route::get('/option/edit/{ids}', [App\Http\Controllers\AdminController::class, 'editoption'])->name('editoption');
 Route::get('/images-slides', [App\Http\Controllers\AdminController::class, 'slides'])->name('slide');
+
+Route::get('/news', [App\Http\Controllers\AdminController::class, 'news'])->name('news');
+Route::get('/new/add', [App\Http\Controllers\AdminController::class, 'addnew'])->name('addnew');
+Route::get('/news/edit/{ids}', [App\Http\Controllers\AdminController::class, 'editnew'])->name('editnew');

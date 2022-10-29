@@ -50,7 +50,7 @@
                             <a href="apps-ecommerce-orders.html">Events</a>
                         </li>
                         <li>
-                            <a href="apps-ecommerce-orders-details.html">News</a>
+                            <a href="{{ route('news') }}">News</a>
                         </li>
                         <li>
                             <a href="{{ route('option') }}">Option</a>

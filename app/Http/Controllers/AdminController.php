@@ -59,4 +59,19 @@ class AdminController extends Controller
     {
         return view('Admin_pages.Slide-Image');
     }
+
+    public function news()
+    {
+        return view('Admin_pages.news');
+    }
+
+    public function addnew()
+    {
+        return view('Admin_pages.add-news');
+    }
+
+    public function editnew($ids)
+    {
+        return view('Admin_pages.edit-news', compact('ids'));
+    }
 }

@@ -11,6 +11,7 @@ class Communique extends Model
 
     protected $fillable = [
         'titre',
-        'detail'
+        'detail',
+        'created_at'
     ];
 }
