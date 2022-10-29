@@ -11,6 +11,7 @@ class Filliere extends Model
 
     protected $fillable = [
         'designation',
-        'detail'
+        'detail',
+        'photo'
     ];
 }
