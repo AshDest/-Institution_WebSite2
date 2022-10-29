@@ -26,3 +26,4 @@ Route::get('/posts/edit/{ids}', [App\Http\Controllers\AdminController::class, 'e
 Route::get('/option', [App\Http\Controllers\AdminController::class, 'option'])->name('option');
 Route::get('/option/add', [App\Http\Controllers\AdminController::class, 'addoption'])->name('addoption');
 Route::get('/option/edit/{ids}', [App\Http\Controllers\AdminController::class, 'editoption'])->name('editoption');
+Route::get('/images-slides', [App\Http\Controllers\AdminController::class, 'slides'])->name('slide');
