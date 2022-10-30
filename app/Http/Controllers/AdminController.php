@@ -89,4 +89,19 @@ class AdminController extends Controller
     {
         return view('Admin_pages.edit-filliere', compact('ids'));
     }
+
+    public function events()
+    {
+        return view('Admin_pages.event');
+    }
+
+    public function addevent()
+    {
+        return view('Admin_pages.add-events');
+    }
+
+    public function editevent($ids)
+    {
+        return view('Admin_pages.edit-events', compact('ids'));
+    }
 }
