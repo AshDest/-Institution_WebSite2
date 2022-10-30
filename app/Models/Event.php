@@ -13,6 +13,7 @@ class Event extends Model
         'titre',
         'content',
         'date',
-        'heure'
+        'heure',
+        'image'
     ];
 }
