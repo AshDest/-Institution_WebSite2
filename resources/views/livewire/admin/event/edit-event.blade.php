@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <form class="form-horizontal" enctype="multipart/form-data" wire:submit.prevent="save">
+    <form class="form-horizontal" enctype="multipart/form-data" wire:submit.prevent="edit">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Titre de L'Evenement</label>
             <input type="text" class="form-control @error('titre') is-invalid @enderror" id="exampleFormControlInput1"
