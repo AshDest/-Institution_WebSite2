@@ -37,3 +37,7 @@ Route::get('/news/edit/{ids}', [App\Http\Controllers\AdminController::class, 'ed
 Route::get('/fillieres', [App\Http\Controllers\AdminController::class, 'fillieres'])->name('fillieres');
 Route::get('/filliere/add', [App\Http\Controllers\AdminController::class, 'addfilliere'])->name('addfilliere');
 Route::get('/filliere/edit/{ids}', [App\Http\Controllers\AdminController::class, 'editfilliere'])->name('editfilliere');
+
+Route::get('/events', [App\Http\Controllers\AdminController::class, 'events'])->name('events');
+Route::get('/event/add', [App\Http\Controllers\AdminController::class, 'addevent'])->name('addevent');
+Route::get('/event/edit/{ids}', [App\Http\Controllers\AdminController::class, 'editevent'])->name('editevent');

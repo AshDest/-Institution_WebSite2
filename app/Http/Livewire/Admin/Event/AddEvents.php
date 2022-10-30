@@ -14,6 +14,7 @@ class AddEvents extends Component
     use LivewireAlert;
     public $titre;
     public $content;
+    public $lieu;
     public $date;
     public $heure;
     public $image;
@@ -21,6 +22,7 @@ class AddEvents extends Component
     protected $rules = [
         'titre' => 'required',
         'content' => 'required',
+        'lieu' => 'required',
         'date' => 'required',
         'heure' => 'required',
         'image' => 'image|max:70000|required|mimes:jpeg,png,jpg,gif',
@@ -29,6 +31,7 @@ class AddEvents extends Component
     protected $messages = [
         'titre.required' => 'Le titre est obligatoire',
         'content.required' => 'Le detail est obligatoire',
+        'lieu.required' => 'Ce champs est obligatoire',
         'date.required' => 'Ce champ est obligatoire',
         'heure.required' => 'Ce champ est obligatoire',
         'image.required' => 'Vous devez selectionner une image.',
@@ -47,10 +50,11 @@ class AddEvents extends Component
         try {
             $imageHash = $this->image->hashName();
             $manager =  new ImageManager();
-            $manager->make($this->image->getRealPath())->resize(214, 197)->save('assets/images/post/' . $imageHash);
+            $manager->make($this->image->getRealPath())->resize(214, 197)->save('assets/images/events/' . $imageHash);
             Event::create([
                 'titre' => ucfirst(trans($this->titre)),
                 'content' => ucfirst(trans($this->content)),
+                'lieu' => ucfirst(trans($this->lieu)),
                 'date' => $this->date,
                 'heure' => $this->heure,
                 'image' => $imageHash,

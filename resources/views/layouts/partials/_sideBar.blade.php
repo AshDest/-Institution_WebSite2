@@ -61,6 +61,9 @@
                         <li>
                             <a href="{{ route('fillieres') }}">Fillieres</a>
                         </li>
+                        <li>
+                            <a href="{{ route('events') }}">Evenements</a>
+                        </li>
                     </ul>
                 </div>
             </li>

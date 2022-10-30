@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('titre');
             $table->text('content');
+            $table->string('lieu');
             $table->date('date');
             $table->time('heure');
             $table->string('image');
