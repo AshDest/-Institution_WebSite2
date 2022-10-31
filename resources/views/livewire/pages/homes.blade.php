@@ -97,7 +97,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-course">
                         <div class="course-img">
-                            <a href="course-details.html"><img src="assets/images/filliere/{{$filliere->photo}}"
+                            <a href="course-details.html"><img src="assets/images/fillieres/{{$filliere->photo}}"
                                     alt="course">
                                 <div class="course-hover">
                                     <i class="fa fa-link"></i>
@@ -165,38 +165,24 @@
                 <div class="col-12">
                     <div class="section-title">
                         <img src="img/icon/section.png" alt="section-title">
-                        <h2>UPCOMMING EVENTS</h2>
+                        <h2>EVENEMENTS A VENIR</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
+                @forelse ($events as $event)
                 <div class="col-lg-6">
                     <div class="single-event mb-35">
                         <div class="event-img">
-                            <a href="event-details.html"><img src="img/event/event1.jpg" alt="event"></a>
+                            <a href="event-details.html"><img src="assets/images/events/{{$event->image}}"
+                                    alt="event"></a>
                         </div>
                         <div class="event-content text-start">
-                            <h3>20 June 2021</h3>
-                            <h4><a href="event-details.html">ADVANCE PHP WORKSHOP</a></h4>
+                            <h3>{{$event->date}}</h3>
+                            <h4><a href="event-details.html">{{$event->titre}}</a></h4>
                             <ul>
-                                <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
-                                <li><i class="fa fa-map-marker"></i>New Yourk City</li>
-                            </ul>
-                            <div class="event-content-right">
-                                <a class="default-btn" href="event-details.html">join now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-event mb-35 mb-md-0">
-                        <div class="event-img">
-                            <a href="event-details.html"><img src="img/event/event3.jpg" alt="event"></a>
-                        </div>
-                        <div class="event-content text-start">
-                            <h3>16 June 2021</h3>
-                            <h4><a href="event-details.html">learning english history</a></h4>
-                            <ul>
-                                <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
-                                <li><i class="fa fa-map-marker"></i>New Yourk City</li>
+                                <li><i class="fa fa-clock-o"></i>{{$event->heure}}</li>
+                                <li><i class="fa fa-map-marker"></i>{{$event->lieu}}</li>
                             </ul>
                             <div class="event-content-right">
                                 <a class="default-btn" href="event-details.html">join now</a>
@@ -204,40 +190,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="single-event mb-35">
-                        <div class="event-img">
-                            <a href="event-details.html"><img src="img/event/event2.jpg" alt="event"></a>
-                        </div>
-                        <div class="event-content text-start">
-                            <h3>18 June 2021</h3>
-                            <h4><a href="event-details.html">DIGITAL MARKETING ANALYSIS</a></h4>
-                            <ul>
-                                <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
-                                <li><i class="fa fa-map-marker"></i>New Yourk City</li>
-                            </ul>
-                            <div class="event-content-right">
-                                <a class="default-btn" href="event-details.html">join now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-event">
-                        <div class="event-img">
-                            <a href="event-details.html"><img src="img/event/event3.jpg" alt="event"></a>
-                        </div>
-                        <div class="event-content text-start">
-                            <h3>14 June 2021</h3>
-                            <h4><a href="event-details.html">UI & UX DESIGNER MEETUP</a></h4>
-                            <ul>
-                                <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
-                                <li><i class="fa fa-map-marker"></i>New Yourk City</li>
-                            </ul>
-                            <div class="event-content-right">
-                                <a class="default-btn" href="event-details.html">join now</a>
-                            </div>
-                        </div>
-                    </div>
+                @empty
+                <div class="alert alert-danger">
+                    <center> . . . Pas de News . . .</center>
                 </div>
+                @endforelse
             </div>
         </div>
     </div>
