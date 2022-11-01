@@ -104,4 +104,9 @@ class AdminController extends Controller
     {
         return view('Admin_pages.edit-events', compact('ids'));
     }
+
+    public function citation()
+    {
+        return view('Admin_pages.citation');
+    }
 }

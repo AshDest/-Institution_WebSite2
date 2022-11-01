@@ -41,3 +41,5 @@ Route::get('/filliere/edit/{ids}', [App\Http\Controllers\AdminController::class,
 Route::get('/events', [App\Http\Controllers\AdminController::class, 'events'])->name('events');
 Route::get('/event/add', [App\Http\Controllers\AdminController::class, 'addevent'])->name('addevent');
 Route::get('/event/edit/{ids}', [App\Http\Controllers\AdminController::class, 'editevent'])->name('editevent');
+
+Route::get('/citations', [App\Http\Controllers\AdminController::class, 'citation'])->name('citation');
