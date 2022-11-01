@@ -64,6 +64,9 @@
                         <li>
                             <a href="{{ route('events') }}">Evenements</a>
                         </li>
+                        <li>
+                            <a href="{{ route('citation') }}">Citations</a>
+                        </li>
                     </ul>
                 </div>
             </li>

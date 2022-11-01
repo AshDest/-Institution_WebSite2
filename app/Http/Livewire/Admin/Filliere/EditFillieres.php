@@ -46,7 +46,7 @@ class EditFillieres extends Component
                 $this->validate();
                 $imageHash = $this->photo->hashName();
                 $manager =  new ImageManager();
-                $manager->make($this->photo->getRealPath())->resize(365, 246)->save('assets/images/filliere/' . $imageHash);
+                $manager->make($this->photo->getRealPath())->resize(365, 246)->save('assets/images/fillieres/' . $imageHash);
                 Filliere::find($this->ids)->fill([
                     'designation' => ucfirst(trans($this->designation)),
                     'detail' => ucfirst(trans($this->detail)),
