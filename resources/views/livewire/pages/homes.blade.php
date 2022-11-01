@@ -87,7 +87,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <img src="{{ asset('img/icon/section1.png') }}" alt="section-title">
+                        <img src="{{ asset('assets/images/icon/section1.png') }}" alt="section-title">
                         <h2>LES FILLIERES ORGANISEES</h2>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <img src="img/icon/section.png" alt="section-title">
+                        <img src="{{ asset('assets/images/icon/section.png') }}" alt="section-title">
                         <h2>EVENEMENTS A VENIR</h2>
                     </div>
                 </div>
