@@ -61,17 +61,26 @@
                         <table class="table table-centered mb-0">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Phone Number</th>
-                                    <th>Date of Birth</th>
+                                    <th>#</th>
+                                    <th>Noms</th>
+                                    <th>Citations</th>
                                     <th>Active?</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @php $i=0; @endphp
+                                @forelse ($citations as $citation)
+                                @php $i++; @endphp
                                 <tr>
-                                    <td>Risa D. Pearson</td>
-                                    <td>336-508-2157</td>
-                                    <td>July 24, 1950</td>
+                                    <td>{{$i}}</td>
+                                    <td class="table-user">
+                                        <img src="assets/images/users/avatar-2.jpg" alt="table-user"
+                                            class="me-2 rounded-circle" />
+                                        {{$citation->noms}}
+                                    </td>
+                                    <td>{{$citation->citation}}</td>
+                                    @if ($citation->active == 1)
                                     <td>
                                         <!-- Switch-->
                                         <div>
@@ -80,46 +89,29 @@
                                                 class="mb-0 d-block"></label>
                                         </div>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>Ann C. Thompson</td>
-                                    <td>646-473-2057</td>
-                                    <td>January 25, 1959</td>
+                                    @else
                                     <td>
                                         <!-- Switch-->
                                         <div>
-                                            <input type="checkbox" id="switch02" checked data-switch="success" />
-                                            <label for="switch02" data-on-label="Yes" data-off-label="No"
+                                            <input type="checkbox" id="switch01" checked data-switch="success" />
+                                            <label for="switch01" data-on-label="Yes" data-off-label="Yes"
                                                 class="mb-0 d-block"></label>
                                         </div>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>Paul J. Friend</td>
-                                    <td>281-308-0793</td>
-                                    <td>September 1, 1939</td>
-                                    <td>
-                                        <!-- Switch-->
-                                        <div>
-                                            <input type="checkbox" id="switch03" data-switch="success" />
-                                            <label for="switch03" data-on-label="Yes" data-off-label="No"
-                                                class="mb-0 d-block"></label>
-                                        </div>
+                                    @endif
+                                    <td class="table-action">
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript: void(0);" class="action-icon"> <i
+                                                class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Linda G. Smith</td>
-                                    <td>606-253-1207</td>
-                                    <td>May 3, 1962</td>
-                                    <td>
-                                        <!-- Switch-->
-                                        <div>
-                                            <input type="checkbox" id="switch04" data-switch="success" />
-                                            <label for="switch04" data-on-label="Yes" data-off-label="No"
-                                                class="mb-0 d-block"></label>
-                                        </div>
-                                    </td>
-                                </tr>
+                                @empty
+                                <div class="alert alert-danger">
+                                    <center> . . . Liste vide . . .</center>
+                                </div>
+                                @endforelse
+
                             </tbody>
                         </table>
                     </div>
