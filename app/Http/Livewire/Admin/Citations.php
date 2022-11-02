@@ -17,6 +17,9 @@ class Citations extends Component
     public $avatar;
     public $active;
     public $grade;
+    public $ids;
+
+
     protected $rules = [
         'noms' => 'required',
         'citation' => 'required|min:10',
@@ -64,6 +67,15 @@ class Citations extends Component
         } catch (\Exception $e) {
             $this->alert('warning', 'Erreur Enregistrement' . $e, ['position' => 'center']);
         }
+    }
+
+    public function displaydata($id)
+    {
+        $vars = Citation::find($id);
+        $this->ids = $vars->id;
+        $this->noms = $vars->noms;
+        $this->citation = $vars->citation;
+        $this->grade = $vars->grade;
     }
     public function delete($id)
     {

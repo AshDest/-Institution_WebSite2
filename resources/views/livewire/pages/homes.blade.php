@@ -62,7 +62,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <div class="about-content">
-                        <h2>WELCOME TO <span>EDUHOME</span></h2>
+                        <h2>BIENVENUE A L'<span>I.S.A.G.E/K-B</span></h2>
                         <p>I must explain to you how all this mistaken idea of denouncing pleure and prsing pain was
                             born
                             and I will give you a complete account of the system, and expound the actual teachings the
