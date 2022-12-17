@@ -28,6 +28,9 @@
                     <!-- End Left sidebar -->
                     <div class="page-aside-right">
                         <div class="row">
+                            @php
+                                $i = 1;
+                            @endphp
                             @forelse ($photos as $photo)
                             <div class="col-md-6 col-xxl-3">
                                 <!-- project card -->
@@ -36,7 +39,10 @@
                                     <img class="card-img-top" src="assets/images/slides/{{$photo->images}}"
                                         alt="project image cap">
                                     <div class="card-img-overlay">
-                                        <div class="badge bg-secondary text-light p-1">{{$photo->id}}</div>
+                                        <div class="badge bg-secondary text-light p-1">@php
+                                            echo $i;
+                                            $i++
+                                        @endphp </div>
                                     </div>
 
                                     <div class="card-body position-relative">
