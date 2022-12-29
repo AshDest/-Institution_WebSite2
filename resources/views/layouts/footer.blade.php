@@ -6,7 +6,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="single-widget pr-60">
                                 <div class="footer-logo pb-25">
-                                    <a href="index.html"><img src="img/logo/footer-logo.png" alt="eduhome"></a>
+                                    <a href="index.html"><img src="{{ asset('img/logo/footer-logo.png') }}" alt="eduhome"></a>
                                 </div>
                                 <p>I must explain to you how all this mistaken idea of denoung pleure and praising pain was born and give you a coete account of the system. </p>
                                 <div class="footer-social">

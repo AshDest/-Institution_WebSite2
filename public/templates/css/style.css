@@ -151,9 +151,9 @@ ul{
     position: relative;
     text-transform: uppercase;
     z-index: 9;
-    background: #EC1C23;
+    background: #023b0c;
 }
-.default-btn:hover {color: #EC1C23; background: #fff}
+.default-btn:hover {color: #023b0c; background: #fff}
 
 .banner-btn span {
     transition: all 0.3s ease 0s;
@@ -565,7 +565,7 @@ textarea {
     color: #fff;
 }
 .header-area {
-    background: transparent none repeat scroll 0 0;
+    background: #023b0c none repeat scroll 0 0;
 }
 .fixed {
   left: 0;
@@ -604,7 +604,7 @@ textarea {
     transition: all 0.4s ease 0s;
 }
 .header-area.two .main-menu nav > ul > li > a {
-    color: #303030;
+    color: #ffffff;
     font-size: 16px;
     line-height: 130px;
 }
@@ -688,7 +688,7 @@ textarea {
 .header-area.two.sticky .mean-container a.meanmenu-reveal {
     margin-top: -49px;
 }
-.mean-container a.meanmenu-reveal span {background-color: #2C2B5E}
+.mean-container a.meanmenu-reveal span {background-color: #57886C}
 .mean-container .mean-nav {
     border-right: 1px solid rgba(0, 0, 0, 0.5);
     margin-top: 0;
@@ -728,7 +728,7 @@ textarea {
     z-index: 999;
 }
 .header-sticky.sticky.two{
-    background: rgba(255, 255, 255, 0.8);
+    background: #023b0c;
 }
 .sticky .main-menu > nav > ul > li > a {
     line-height: 69px;
@@ -1807,7 +1807,7 @@ textarea {
     width: 100%;
     height: 100%;
     content: "";
-    background: rgba(44, 43, 94, 0.9);
+    background: rgb(34, 116, 60, 0.9)
 }
 .testimonial-area.three{background: #FAFAFA}
 .testimonial-area.three:after{display: none}
@@ -2363,7 +2363,7 @@ textarea {
 .single-widget ul li:last-child{
     margin-right: 0px;
 }
-.footer-bottom{background: #2C2B5E}
+.footer-bottom{background: #9F7833}
 .footer-bottom p {
     color: #c7c7c7;
     font-size: 14px;
@@ -2440,17 +2440,17 @@ textarea {
 /*----------------------------------------*/
 /*  13. Service CSS
 /*----------------------------------------*/
-.single-service{padding: 40px 40px; box-shadow: 0 0 4px 0 #ddd;}
+.single-service{padding: 40px 40px; box-shadow: 0 0 4px 0 #ddd; background:#023b0c}
 .service-area h3{
     font-size: 20px;
-    color: #303030;
+    color: #ffffff;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 12px;
 }
 .service-area p{
     font-size: 14px;
-    color: #606060;
+    color: #d9ed92;
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 0px;
 }

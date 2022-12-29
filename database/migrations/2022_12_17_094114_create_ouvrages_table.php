@@ -24,7 +24,7 @@ return new class extends Migration
             $table->date('datepublication');
             $table->string('maisoneditor');
             $table->string('image')->nullable();
-            $table->foreign('domain_id')->references('id')->on('domains')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('domain_id')->references('id')->on('domaines')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
