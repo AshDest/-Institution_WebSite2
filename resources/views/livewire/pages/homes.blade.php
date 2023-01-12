@@ -1,4 +1,366 @@
 <div>
+    <!-- slider-area -->
+    @livewire('pages.home.slides')
+    <!-- slider-area-end -->
+    <!-- about-area -->
+    @livewire('pages.home.about-homes')
+    <!-- about-area-end -->
+    <!-- services-three-area -->
+    @livewire('pages.home.option-homes')
+    <!-- services-three-area -->
+    <!-- counter-area -->
+    <div class="counter-area p-relative pt-90 pb-90"
+        style="background-image:url(fronts/img/bg/counter-bg.png);  background-repeat: no-repeat;  background-size:cover;">
+        <div class="container">
+
+            <div class="row p-relative">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated"
+                        data-delay=".2s">
+                        <div class="counter p-relative"
+                            style="background-image:url(fronts/img/bg/c-object.html);  background-repeat: no-repeat;">
+                            <span class="count">1547</span>
+                            <p>Project <br>Completed</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated"
+                        data-delay=".2s">
+                        <div class="counter p-relative"
+                            style="background-image:url(fronts/img/bg/c-object.html);  background-repeat: no-repeat;">
+                            <span class="count">2587</span>
+                            <p>Our Happy <br>Clients</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated"
+                        data-delay=".2s">
+                        <div class="counter p-relative"
+                            style="background-image:url(fronts/img/bg/c-object.html);  background-repeat: no-repeat;">
+                            <span class="count">1879</span>
+                            <p>Cup <br>Of Coffee</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated"
+                        data-delay=".2s">
+                        <div class="counter p-relative"
+                            style="background-image:url(fronts/img/bg/c-object.html);  background-repeat: no-repeat;">
+                            <span class="count">2547</span>
+                            <p>Win <br>Awards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- counter-area-end -->
+    <!-- team-area -->
+    @livewire('pages.home.personnel-homes')
+    <!-- team-area-end -->
+    <!-- cta-area -->
+    <section class="cta-area cta-bg pt-120 pb-120" style="background-image:url(fronts/img/bg/cta_bg02.png)">
+        <div class="container">
+            <div class="row justify-content-center  align-items-center">
+                <div class="col-lg-8">
+                    <div class="section-title cta-title wow fadeInLeft animated" data-animation="fadeInDown animated"
+                        data-delay=".2s">
+                        <h3>Watch Us</h3>
+                        <h2> we provide truly prominent IT solutions.</h2>
+                        <p>Nunc pellentesque eros ac augue tempus, vitae convallis lorem consectetur. Nulla maximus
+                            at nisl eu malesuada. Nullam quis blandit lacus. Fusce tincidunt tellus turpis, quis
+                            fermentum justo tempus eget.</p>
+                        <div class="cta-btn s-cta-btn wow fadeInRight animated mt-30"
+                            data-animation="fadeInDown animated" data-delay=".2s">
+                            <a href="about.html" class="btn ss-btn smoth-scroll">Let’s Get Started</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+
+                    <div class="s-video-content">
+                        <a href="https://www.youtube.com/watch?v=gyGsPlt06bo" class="popup-video mb-50"><img
+                                src="fronts/img/bg/play-button.png" alt="circle_right"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cta-area-end -->
+    <!-- gallery-area -->
+    @livewire('pages.home.galerie-homes')
+    <!-- gallery-area-end -->
+
+    <!-- frequently-area -->
+    @livewire('pages.home.f-a-q')
+    <!-- frequently-area-end -->
+    <!-- pricing-area -->
+    {{-- <section id="pricing" class="pricing-area pt-120 pb-60 fix p-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center mb-50 wow fadeInDown animated" data-animation="fadeInDown"
+                        data-delay=".4s">
+                        <h5>Our Pricing</h5>
+                        <h2>
+                            Your Perfect Plans
+                        </h2>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box pricing-box2 mb-60">
+                        <div class="pricing-head">
+                            <h3>Business</h3>
+                            <div class="month">Monthly</div>
+                            <div class="price-count">
+                                <h2>$29.99</h2>
+                            </div>
+                            <hr>
+                        </div>
+
+                        <div class="pricing-body mt-20 mb-30 text-left">
+                            <ul>
+                                <li>Aliquam quis justo at lorem</li>
+                                <li>Fusce sodales, urna et tempus</li>
+                                <li>Vestibulum blandit lorem quis</li>
+                                <li>Orci varius natoque penatibus</li>
+                                <li>Aliquam a nisl congue, auctor</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="pricing-btn">
+                            <a href="contact.html" class="btn ss-btn">Get Started <i class="fal fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box pricing-box2 mb-60">
+                        <div class="pricing-head">
+                            <h3>Standard</h3>
+                            <div class="month">Monthly</div>
+                            <div class="price-count">
+                                <h2>$39.99</h2>
+                            </div>
+                            <hr>
+                        </div>
+
+                        <div class="pricing-body mt-20 mb-30 text-left">
+                            <ul>
+                                <li>Aliquam quis justo at lorem</li>
+                                <li>Fusce sodales, urna et tempus</li>
+                                <li>Vestibulum blandit lorem quis</li>
+                                <li>Orci varius natoque penatibus</li>
+                                <li>Aliquam a nisl congue, auctor</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="pricing-btn">
+                            <a href="contact.html" class="btn ss-btn">Get Started <i class="fal fa-angle-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-box pricing-box2 mb-60">
+                        <div class="pricing-head">
+                            <h3>Premium</h3>
+                            <div class="month">Monthly</div>
+                            <div class="price-count">
+                                <h2>$59.99</h2>
+                            </div>
+                            <hr>
+                        </div>
+
+                        <div class="pricing-body mt-20 mb-30 text-left">
+                            <ul>
+                                <li>Aliquam quis justo at lorem</li>
+                                <li>Fusce sodales, urna et tempus</li>
+                                <li>Vestibulum blandit lorem quis</li>
+                                <li>Orci varius natoque penatibus</li>
+                                <li>Aliquam a nisl congue, auctor</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="pricing-btn">
+                            <a href="contact.html" class="btn ss-btn">Get Started <i class="fal fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+    <!-- pricing-area-end -->
+    <!-- testimonial-area -->
+    <section class="testimonial-area pt-120 pb-115 p-relative fix"
+        style="background-image:url(fronts/img/testimonial/test-bg.png); background-color: #edf0f3; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center mb-50 wow fadeInDown animated" data-animation="fadeInDown"
+                        data-delay=".4s">
+                        <h5>Testimonial</h5>
+                        <h2>
+                            What Our Clients Says
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="testimonial-active">
+                        <div class="single-testimonial">
+
+                            <p>“Morbi neque nisi, tincidunt nec erat vitae, viverra porttitor lorem. Fusce tempor
+                                nunc at luctus blandit. Donec eget fermentum magna.we dedicate financial on services
+                                the teams serve all Curabitur ac tortor ante. Sed quis dignissim”</p>
+                            <div class="ta-info">
+                                <h6>Margie Dose</h6>
+                                <span>Web Developer</span>
+                            </div>
+                            <div class="qt-img">
+                                <img src="fronts/img/testimonial/qt-icon.png" alt="img">
+                            </div>
+                            <div class="testi-author">
+                                <img src="fronts/img/testimonial/testi_avatar.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="single-testimonial">
+                            <p>“Morbi neque nisi, tincidunt nec erat vitae, viverra porttitor lorem. Fusce tempor
+                                nunc at luctus blandit. Donec eget fermentum magna.we dedicate financial on services
+                                the teams serve all Curabitur ac tortor ante. Sed quis dignissim”</p>
+                            <div class="ta-info">
+                                <h6>Jone Walker</h6>
+                                <span>Web Designer</span>
+                            </div>
+                            <div class="qt-img">
+                                <img src="fronts/img/testimonial/qt-icon.png" alt="img">
+                            </div>
+                            <div class="testi-author">
+                                <img src="fronts/img/testimonial/testi_avatar_02.png" alt="img">
+                            </div>
+                        </div>
+
+                        <div class="single-testimonial">
+
+                            <p>“Morbi neque nisi, tincidunt nec erat vitae, viverra porttitor lorem. Fusce tempor
+                                nunc at luctus blandit. Donec eget fermentum magna.we dedicate financial on services
+                                the teams serve all Curabitur ac tortor ante. Sed quis dignissim”</p>
+                            <div class="ta-info">
+                                <h6>Darlene Dobertson</h6>
+                                <span>Web Developer</span>
+                            </div>
+                            <div class="qt-img">
+                                <img src="fronts/img/testimonial/qt-icon.png" alt="img">
+                            </div>
+                            <div class="testi-author">
+                                <img src="fronts/img/testimonial/testi_avatar_03.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="single-testimonial">
+
+                            <p>“Morbi neque nisi, tincidunt nec erat vitae, viverra porttitor lorem. Fusce tempor
+                                nunc at luctus blandit. Donec eget fermentum magna.we dedicate financial on services
+                                the teams serve all Curabitur ac tortor ante. Sed quis dignissim”</p>
+                            <div class="ta-info">
+                                <h6>Margie Dose</h6>
+                                <span>Web Developer</span>
+                            </div>
+                            <div class="qt-img">
+                                <img src="fronts/img/testimonial/qt-icon.png" alt="img">
+                            </div>
+                            <div class="testi-author">
+                                <img src="fronts/img/testimonial/testi_avatar.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="single-testimonial">
+                            <p>“Morbi neque nisi, tincidunt nec erat vitae, viverra porttitor lorem. Fusce tempor
+                                nunc at luctus blandit. Donec eget fermentum magna.we dedicate financial on services
+                                the teams serve all Curabitur ac tortor ante. Sed quis dignissim”</p>
+                            <div class="ta-info">
+                                <h6>Jone Walker</h6>
+                                <span>Web Designer</span>
+                            </div>
+                            <div class="qt-img">
+                                <img src="fronts/img/testimonial/qt-icon.png" alt="img">
+                            </div>
+                            <div class="testi-author">
+                                <img src="fronts/img/testimonial/testi_avatar_02.png" alt="img">
+                            </div>
+                        </div>
+
+                        <div class="single-testimonial">
+
+                            <p>“Morbi neque nisi, tincidunt nec erat vitae, viverra porttitor lorem. Fusce tempor
+                                nunc at luctus blandit. Donec eget fermentum magna.we dedicate financial on services
+                                the teams serve all Curabitur ac tortor ante. Sed quis dignissim”</p>
+                            <div class="ta-info">
+                                <h6>Darlene Dobertson</h6>
+                                <span>Web Developer</span>
+                            </div>
+                            <div class="qt-img">
+                                <img src="fronts/img/testimonial/qt-icon.png" alt="img">
+                            </div>
+                            <div class="testi-author">
+                                <img src="fronts/img/testimonial/testi_avatar_03.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonial-area-end -->
+    <!-- brand-area -->
+    <div class="brand-area pt-60 pb-60" style="background-color:#38B000;">
+        <div class="container">
+            <div class="row brand-active">
+                <div class="col-xl-2">
+                    <div class="single-brand">
+                        <img src="fronts/img/brand/b-logo1.png" alt="img">
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="single-brand">
+                        <img src="fronts/img/brand/b-logo2.png" alt="img">
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="single-brand">
+                        <img src="fronts/img/brand/b-logo3.png" alt="img">
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="single-brand">
+                        <img src="fronts/img/brand/b-logo4.png" alt="img">
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="single-brand">
+                        <img src="fronts/img/brand/b-logo5.png" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- brand-area-end -->
+    <!-- blog-area -->
+    @livewire('pages.home.blog-homes')
+    <!-- blog-area-end -->
+    {{--
     <!-- Background Area Start -->
     <section id="slider-container" class="slider-area two">
         <div class="slider-owl owl-theme owl-carousel">
@@ -339,5 +701,6 @@
             </div>
         </div>
     </div>
-    <!-- Subscribe End -->
+    <!-- Subscribe End --> --}}
+
 </div>
